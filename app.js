@@ -10,15 +10,15 @@ app.use(express.json());
 app.use("/api",userRouter);
 
 
+app.listen(process.env.PORT,()=>{
+    console.log("Server is listing on 3000");
+});     
+console.log("Database is Connection");
 
-connectDb()
-.then(()=>{
-    app.listen(process.env.PORT,()=>{
-        console.log("Server is listing on 3000");
-    });     
-    console.log("Database is Connection");
+// connectDb()
+// .then(()=>{
     
-}).catch(()=>{
-    console.log("Error");
+// }).catch(()=>{
+//     console.log("Error");
     
-})
+// })
